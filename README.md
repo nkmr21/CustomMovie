@@ -3,7 +3,8 @@
 
 expo-avのインストール
 権限の設定が必要になる
-[expo/packages/expo-av at main · expo/expo](https://github.com/expo/expo/tree/sdk-47/packages/expo-av#installation-in-bare-react-native-projects)を参考にapp.config.jsに以下を追記する。
+[expo/packages/expo-av at main · expo/expo](https://github.com/expo/expo/tree/sdk-47/packages/expo-av#installation-in-bare-react-native-projects)を参考にapp.config.jsに以下を追記した。
+追記後に`npm run prebuild`をしてからビルドする。
 ```javascript
 android: {
       permissions: ['RECORD_AUDIO'],
