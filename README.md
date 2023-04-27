@@ -1,4 +1,4 @@
-# CustomMovie
+# CustomMoviePlayer
 動画再生をカスタマイズしたい
 
 expo-avのインストール
