@@ -80,7 +80,7 @@ export const Home: React.FC = () => {
 
   const startProgress = useCallback(() => {
     if (barWidth.value === 0) {
-      barWidth.value = withTiming(300, {duration: 30000});
+      barWidth.value = withTiming(300, {duration: 30000, easing: Easing.linear});
     } else {
       barWidth.value = 0;
     }
@@ -117,10 +117,10 @@ export const Home: React.FC = () => {
         useNativeControls={false} // falseでコントローラが消える
         resizeMode={ResizeMode.CONTAIN}
         isLooping
-        progressUpdateIntervalMillis={1}
+        progressUpdateIntervalMillis={1000}
         onPlaybackStatusUpdate={updatePlaybackuseCallback}
       />
-      <View>
+      <View style={{position: 'absolute', top: 300}}>
         <View style={{backgroundColor: 'grey', height: 5, width: 300}}>
           {/* レンダリングの間隔があるのでカクカクしてしまう */}
           <View style={{backgroundColor: 'black', height: 5, width: 300 * progress}} />
