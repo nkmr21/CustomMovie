@@ -117,7 +117,7 @@ export const Home: React.FC = () => {
         useNativeControls={false} // falseでコントローラが消える
         resizeMode={ResizeMode.CONTAIN}
         isLooping
-        progressUpdateIntervalMillis={1000}
+        progressUpdateIntervalMillis={100}
         onPlaybackStatusUpdate={updatePlaybackuseCallback}
       />
       <View style={{position: 'absolute', top: 300}}>
@@ -162,5 +162,4 @@ const styles = StyleSheet.create({
   video: {height: 500},
   buttons: {},
 });
-
 ```
